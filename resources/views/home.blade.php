@@ -85,10 +85,10 @@
             </div>
             <hr>
 
-            <div class="row" style="display: none;">
+            <div class="row">
                 <div class="col-lg-12 content">
                     <h3>Vendas de Hoje</h3>
-                    <div id="chartdiv" style="width: 100%; height: 300px"></div>
+                    <canvas id="chartdiv" style="width: 100%; height: 300px"></canvas>
                 </div>
             </div>
             <!-- <hr> -->

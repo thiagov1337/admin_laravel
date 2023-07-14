@@ -12,21 +12,17 @@
     <title>Portal Marispan</title>
 
     <!-- Fonts -->
+    {{-- CDN Link for testing css --}}
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link href="http://interno.marispan.com/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="http://interno.marispan.com/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="http://interno.marispan.com/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    {{-- <link href="http://interno.marispan.com/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> --}}
     <link href="http://interno.marispan.com/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="http://interno.marispan.com/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite([
-        'resources/sass/app.scss',
-        'resources/css/style.css', 
-        'resources/js/app.js', 
-        'resources/js/main.js'
-        ])
+    @vite(['resources/sass/app.scss', 'resources/css/style.css', 'resources/js/app.js', 'resources/js/main.js'])
 </head>
 
 <body>
@@ -41,5 +37,4 @@
         </main>
     </div>
 </body>
-
 </html>
