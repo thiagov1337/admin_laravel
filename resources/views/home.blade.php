@@ -7,7 +7,8 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="icon-box">
-                        <img height="55" src="http://interno.marispan.com/assets/img/ICONE MISSÃO.png" class="mx-auto d-block">
+                        <img height="55" src="http://interno.marispan.com/assets/img/ICONE MISSÃO.png"
+                            class="mx-auto d-block">
                         <h3>Missão</h3>
                         <p>Desenvolver soluções e produzir implementos agrícolas para aumentar a produtividade no campo.
                         </p>
@@ -15,15 +16,17 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="icon-box">
-                        <img height="55" src="http://interno.marispan.com/assets/img/ICONE VISÃO.png" class="mx-auto d-block">
+                        <img height="55" src="http://interno.marispan.com/assets/img/ICONE VISÃO.png"
+                            class="mx-auto d-block">
                         <h3>Visão</h3>
-                        <p>Ser uma empresa reconhecida nacionalmente por oferecer as melhores soluções para o
-                            agronegócio.</p>
+                        <p>Ser uma empresa reconhecida nacionalmente por oferecer as melhores soluções para o agronegócio.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="icon-box">
-                        <img height="55" src="http://interno.marispan.com/assets/img/ICONE VALORES.png" class="mx-auto d-block">
+                        <img height="55" src="http://interno.marispan.com/assets/img/ICONE VALORES.png"
+                            class="mx-auto d-block">
                         <h3>Valores</h3>
                         <ul>
                             <li>
@@ -44,7 +47,8 @@
             </div>
 
         </div>
-    </section><!-- End Featured Section -->
+    </section>
+    <!-- End Featured Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -84,15 +88,8 @@
                 </div>
             </div>
             <hr>
-
-            <div class="row">
-                <div class="col-lg-12 content">
-                    <h3>Vendas de Hoje</h3>
-                    <canvas id="chartdiv" style="width: 100%; height: 300px"></canvas>
-                </div>
-            </div>
-            <!-- <hr> -->
-    </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
     <section id="clients" class="clients">
         <div class="container">

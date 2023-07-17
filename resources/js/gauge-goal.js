@@ -27,7 +27,7 @@ let chart = root.container.children.push(am5radar.RadarChart.new(root, {
 // Create axis and its renderer
 // https://www.amcharts.com/docs/v5/charts/radar-chart/gauge-charts/#Axes
 let axisRenderer = am5radar.AxisRendererCircular.new(root, {
-    innerRadius: -40
+    innerRadius: -50
 });
 
 axisRenderer.grid.template.setAll({
@@ -38,7 +38,7 @@ axisRenderer.grid.template.setAll({
 
 let xAxis = chart.xAxes.push(am5xy.ValueAxis.new(root, {
     maxDeviation: 0,
-    min: -40,
+    min: 0,
     max: 100,
     strictMinMax: true,
     renderer: axisRenderer
@@ -89,7 +89,7 @@ bullet.get("sprite").on("rotation", function () {
 setInterval(function () {
     axisDataItem.animate({
         key: "value",
-        to: Math.round(Math.random() * 140 - 40),
+        to: Math.round(Math.random() * 100),
         duration: 500,
         easing: am5.ease.out(am5.ease.cubic)
     });
@@ -100,38 +100,28 @@ chart.bulletsContainer.set("mask", undefined);
 
 // Create axis ranges bands
 // https://www.amcharts.com/docs/v5/charts/radar-chart/gauge-charts/#Bands
-let bandsData = [{
-    title: "Unsustainable",
+var bandsData = [{
+    title: "Muito baixo",
     color: "#ee1f25",
-    lowScore: -40,
-    highScore: -20
-}, {
-    title: "Volatile",
-    color: "#f04922",
-    lowScore: -20,
-    highScore: 0
-}, {
-    title: "Foundational",
-    color: "#fdae19",
     lowScore: 0,
     highScore: 20
 }, {
-    title: "Developing",
-    color: "#f3eb0c",
+    title: "Baixo",
+    color: "#f04922",
     lowScore: 20,
     highScore: 40
 }, {
-    title: "Maturing",
-    color: "#b0d136",
+    title: "Médio",
+    color: "#f3eb0c",
     lowScore: 40,
     highScore: 60
 }, {
-    title: "Sustainable",
+    title: "Bom",
     color: "#54b947",
     lowScore: 60,
     highScore: 80
 }, {
-    title: "High Performing",
+    title: "Excelente",
     color: "#0f9747",
     lowScore: 80,
     highScore: 100
