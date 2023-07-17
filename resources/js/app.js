@@ -2,4 +2,6 @@ import './bootstrap';
 
 import '../sass/app.scss'
 
-import './modules/am5'
+import './map-clients'
+
+import './gauge-goal'
