@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\WebServices\WebService;
+
+use App\WebServices\WebServiceProduction;
+use App\WebServices\WebServiceTest;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
