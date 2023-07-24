@@ -19,17 +19,17 @@ abstract class GenericRepository implements RepositoryInterface
 
     public function create(array $data)
     {
-        return DB::table($this->table)->insert($data);
+        // return DB::table($this->table)->insert($data);
     }
 
     public function update($id, array $data)
     {
-        return DB::table($this->table)->where('id', $id)->update($data);
+        // return DB::table($this->table)->where('id', $id)->update($data);
     }
 
     public function delete($id)
     {
-        return DB::table($this->table)->where('id', $id)->delete();
+        // return DB::table($this->table)->where('id', $id)->delete();
     }
 }
 

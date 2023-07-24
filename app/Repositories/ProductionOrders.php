@@ -7,15 +7,17 @@ use Illuminate\Support\Facades\DB;
 
 class ProductionOrders extends GenericRepository
 {
+    protected $oracle;
+
     public function __construct()
     {
-        parent::__construct('E900COP');
+        $this->oracle = DB::connection('oracle');
     }
 
-    public function OrdersByOperation($status)
+    public function OrdersByOperation($idOperation)
     {
-        return DB::table('pedidos')
-            ->where('status', $status)
+        return DB::table('E900COP')
+            ->where('CodCre', $idOperation)
             ->get();
     }
 }

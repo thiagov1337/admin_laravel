@@ -35,6 +35,16 @@ return [
 
     'connections' => [
 
+        'oracle' => [
+            'driver' => 'oracle',
+            'tns' => env('ORACLE_TNS'),
+            'database' => env('ORACLE_DATABASE'),
+            'username' => env('ORACLE_USERNAME'),
+            'password' => env('ORACLE_PASSWORD'),
+            'charset' => env('ORACLE_CHARSET', 'AL32UTF8'),
+            'prefix_schema' => env('ORACLE_PREFIX_SCHEMA', ''),
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
@@ -125,7 +135,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
+            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_database_'),
         ],
 
         'default' => [
