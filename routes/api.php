@@ -18,4 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/clients-to-chart', [App\Http\Controllers\Api\Home\ChartController::class, 'index']);
+//Home charts
+Route::get('/clients-to-chart', App\Http\Controllers\Api\Home\GetClientsToChart::class)->name('clientsToChart');
