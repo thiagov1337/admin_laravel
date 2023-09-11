@@ -1,0 +1,11 @@
+{
+    "name": "Apontamento",
+    "alias": "apontamento",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Apontamento\\Providers\\ApontamentoServiceProvider"
+    ],
+    "files": []
+}
