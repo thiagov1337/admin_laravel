@@ -12,5 +12,7 @@
 */
 
 Route::prefix('apontamento')->group(function() {
-    Route::get('/', 'ApontamentoController@index');
+    Route::get('/{codigoRecurso}', 'ApontamentoController@index');
+
+
 });
