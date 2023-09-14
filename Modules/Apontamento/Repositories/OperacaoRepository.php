@@ -2,23 +2,28 @@
 
 namespace Modules\Apontamento\Repositories;
 
+use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Connection;
+use Illuminate\Support\Collection;
 
 class OperacaoRepository
 {
-    private Connection $oracle;
+    private Builder $builder;
 
     public function __construct()
     {
-        $this->oracle = DB::connection('oracle');
+        $this->builder = DB::connection('oracle')->table('E725CRE');
     }
 
-    public function operacaoPorCodigoRecurso(string $codigoRecurso, array $colunas = ['*'])
+    public function porCodigoRecurso(string $codigoRecurso): self
     {
-        return $this->oracle->table('E725CRE')
-            ->where('CODCRE', $codigoRecurso)
-            ->select($colunas)
-            ->first();
+        $this->builder->where('CODCRE', $codigoRecurso);
+        return $this;
     }
+
+    public function first(array $colunas = ['*']): object
+    {
+        return $this->builder->first($colunas);
+    }
+
 }

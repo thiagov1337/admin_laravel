@@ -6,10 +6,10 @@
         <div class="card-header">
             Apontamento
         </div>
-        <div class="card-body">
+        <div class="card-body py-1">
             <div class="row">
-                <div class="col-sm-8 pt-1 ">
-                    <div class="row">
+                <div class="col-sm-8">
+                    <div class="row p-2">
                         <div class="col-md-2">
                             <label for=""><strong>ORIGEM</strong></label>
                             <input type="text" class="form-control" id="CodOri" name="CodOri" required="" readonly="">
@@ -51,11 +51,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-sm-4 border rounded-2 bg-opacity-10 bg-secondary">
                     <div class="row">
                         <select class="form-select" style="font-weight: bold;">
                             <option value="0" selected="true" disabled="">SELECIONE O OPERADOR</option>
+                            @foreach($operadores as $operador)
+                                <option value="{{ $operador->numcad }}">{{ $operador->nomope }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="row">
@@ -82,7 +84,7 @@
                             <div class="card my-2">
                                 <button type="button" class="btn btn-dark" data-toggle="modal"
                                         data-target="#modalFinalTurno">
-                                    FINALIZAR TURNO
+                                    PAUSAR TURNO
                                 </button>
                             </div>
                         </div>
@@ -98,13 +100,13 @@
 
         <div class="table-responsive">
             <table class="table table-hover table-bordered">
-                <tbody>
-                <tr class="text-center">
-                    <th>Pri.</th>
-                    <th>OP</th>
-                    <th>Produto</th>
-                    <th>Qtd. Prevista</th>
-                </tr>
+                <tbody class="table-secondary">
+                    <tr class="text-center">
+                        <th>Pri.</th>
+                        <th>OP</th>
+                        <th>Produto</th>
+                        <th>Qtd. Prevista</th>
+                    </tr>
                 </tbody>
                 <tbody>
                 @foreach($ordens as $ordem)

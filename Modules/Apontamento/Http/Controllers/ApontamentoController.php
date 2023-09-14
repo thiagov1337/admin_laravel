@@ -13,14 +13,17 @@ class ApontamentoController extends Controller
     public function __construct(
         private RetornaRepositoriesService $retornaRepositories,
     )
-    {}
+    {
+    }
 
     /**
      * @return Renderable
      */
     public function index(Request $request)
     {
-        $resultadoRepositories = $this->retornaRepositories->executar($request->codigoRecurso);
+        $resultadoRepositories = $this->retornaRepositories
+            ->executar($request->codigoRecurso);
+
         return view('apontamento::index', $resultadoRepositories);
     }
 

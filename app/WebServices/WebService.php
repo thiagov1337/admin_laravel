@@ -8,11 +8,12 @@ class WebService
 {
     public function __construct(private WebServiceInterface $webService)
     {
+        $this->webService->connect();
     }
 
     public function send($method, $paramns)
     {
-        $this->webService->connect();
         $this->webService->callMethod($method, ['user', 'pass', 0, $paramns]);
     }
+
 }
