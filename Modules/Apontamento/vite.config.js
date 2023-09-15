@@ -16,7 +16,7 @@ export default defineConfig({
             buildDirectory: 'build-apontamento',
             input: [
                 __dirname + '/Resources/assets/sass/app.scss',
-                __dirname + '/Resources/assets/js/app.js'
+                __dirname + '/Resources/assets/js/app.js',
             ],
             refresh: true,
         }),

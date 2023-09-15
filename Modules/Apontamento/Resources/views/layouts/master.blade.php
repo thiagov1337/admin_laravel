@@ -7,8 +7,10 @@
         <title>{{ $title ?? 'Apontamento' }}</title>
 
         {{-- Laravel Vite - CSS File --}}
-        {{-- {{ module_vite('build-apontamento', 'Resources/assets/sass/app.scss') }} --}}
         @vite(['resources/sass/app.scss', 'resources/js/bootstrap.js'])
+        @vite(['Modules/Apontamento/Resources/assets/js/app.js'])
+
+{{--        {{ module_vite('build-apontamento', 'Resources/assets/js/app.js') }}--}}
 
     </head>
     <body>

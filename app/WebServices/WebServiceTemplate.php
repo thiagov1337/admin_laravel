@@ -6,7 +6,7 @@ use App\WebServices\Interfaces\WebServiceInterface;
 use SoapClient;
 use SoapFault;
 
-class WebServiceTemplate implements WebServiceInterface
+abstract class WebServiceTemplate
 {
     private string $ip = '10.0.0.195:8080';
     private string $service;

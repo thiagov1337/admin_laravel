@@ -13,7 +13,12 @@ class WebService
 
     public function send($method, $paramns)
     {
-        $this->webService->callMethod($method, ['user', 'pass', 0, $paramns]);
+        $this->webService->callMethod($method, [
+            env('WS_USERNAME'),
+            env('WS_PASSWORD'),
+            0,
+            $paramns
+        ]);
     }
 
 }

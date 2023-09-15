@@ -13,6 +13,4 @@
 
 Route::prefix('apontamento')->group(function() {
     Route::get('/{codigoRecurso}', 'ApontamentoController@index');
-
-
 });

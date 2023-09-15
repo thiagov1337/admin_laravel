@@ -36,8 +36,19 @@ class OrdemRepository
         return $this;
     }
 
+    public function ordem(string $origem, int $ordem): self
+    {
+        $this->builder->where(['E900COP.CODORI' => $origem, 'E900COP.NUMORP' => $ordem]);
+        return $this;
+    }
+
     public function get(array $colunas = ['*']): Collection
     {
         return $this->builder->get($colunas);
+    }
+
+    public function first(array $colunas = ['*']): object
+    {
+        return $this->builder->first($colunas);
     }
 }
